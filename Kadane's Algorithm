@@ -14,12 +14,12 @@ public static int kadanesAlgo(int a[]) {
 		
 		currSum += a[i];
 		
-		if(currSum < 0) {
+		if(max < currSum) {
 			
-			currSum =0;
+			max = currSum;
 		}
 		
-		   max = Math.max(max, currSum);
+		   currSum = Math.max( currSum, 0);
 		
 	}
 	return max;
